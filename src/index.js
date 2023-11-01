@@ -2,6 +2,9 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
+
+import useRoute from "./routes/userRoutes.js";
+
 //  1.- Iniciar la aplicacion !!!
 const app = express();
 
@@ -15,6 +18,8 @@ app.use(cors());
 app.use(express.json());
 
 //4.-
+
+app.use(useRoute)
 
 
 //5.-Iniciar el loop del servidor
